@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutorunManager.MainPage"
+             xmlns:common="clr-namespace:AutorunManager;assembly=AutorunManager">
+
+    <Grid x:Name="MainGrid">
+        <Grid.BindingContext>
+            <common:MainViewModel />
+        </Grid.BindingContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Margin="10" VerticalOptions="Center" HorizontalOptions="Center">Select apps for autorun</Label>
+
+        <SearchBar Placeholder="Search"
+                   Grid.Row="1"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Text="{Binding SearchText}"
+                   Margin="0, 0, 0, 10">
+        </SearchBar>
+
+        <ListView Grid.Row="2" ItemsSource="{Binding Apps}" x:Name="appsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Background="#efeefef" Source="{Binding Icon}" MinimumHeightRequest="50" MinimumWidthRequest="50" WidthRequest="50" HeightRequest="50" />
+
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding AppName}" FontAttributes="Bold" />
+                                <Label Text="{Binding PackageName}" />
+                            </StackLayout>
+
+                            <Switch
+                                Grid.Column="2"
+                                IsToggled="{Binding IsSelected, Mode=TwoWay}"
+                                VerticalOptions="Center">
+                            </Switch>
+
+                            <Button Grid.Column="2" Opacity="0" Command="{Binding SwitchCommand}">
+
+                            </Button>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,289 @@
+--------- beginning of main
+06-16 16:12:49.605   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:49.917  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:49.918  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:49.918  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:49.918  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:49.923  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:49.924  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:49.924  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:49.925  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:50.558  1746  1746 I hct_torch: [onReceive]intent=Intent { act=android.intent.action.BATTERY_CHANGED flg=0x60000010 (has extras) }
+--------- beginning of system
+06-16 16:12:50.559  1746  1746 D PowerUI : mBatteryProps.batteryTemperature = 310,mLastBatteryTemperature = 310
+06-16 16:12:50.559  1746  1746 D PowerUI : oldTempBucket = 0,tempBucket = 0
+06-16 16:12:50.560  1746  1746 D KeyguardChargeAnimationView: mBatteryPercentage is 17% mCharging false battery 17
+06-16 16:12:50.560  1746  1746 D BvMarqueeService: android.intent.action.BATTERY_CHANGED
+06-16 16:12:50.561  1746  1746 D BvMarqueeService:  电量 = 17
+06-16 16:12:50.561  1746  1746 D BvMarqueeService: message==null
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView:  applySpeed :1.28
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView:  applySpeed :1.28
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView:  applySpeed :1.28
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView:  applySpeed :1.28
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView:  applySpeed :1.28
+06-16 16:12:50.561  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:50.582  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:12:50.582  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:12:50.582  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:12:50.597   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.33 dur=2986.30 max=2986.30 min=2986.30
+06-16 16:12:50.600   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.669986,dur:2985.14,max:2892.76,min:92.38  
+06-16 16:12:50.605   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:50.668   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:12:50.693   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.33 dur=2986.86 max=2986.86 min=2986.86
+06-16 16:12:51.606   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:52.606   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:53.566  1746  1746 D StatusBarNetShowView:  applySpeed :1.89
+06-16 16:12:53.566  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView:  applySpeed :1.89
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView:  applySpeed :1.89
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView:  applySpeed :1.89
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView:  applySpeed :1.89
+06-16 16:12:53.567  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:53.583  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:12:53.583  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:12:53.583  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:12:53.606   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:53.607   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.33 dur=3009.28 max=3009.28 min=3009.28
+06-16 16:12:53.611   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.664155,dur:3011.34,max:2917.14,min:94.20  
+06-16 16:12:53.676   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:12:53.702   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.33 dur=3008.30 max=3008.30 min=3008.30
+06-16 16:12:53.704   700   883 I hwcomposer: [DRMDEV] (0) failed to waitNextVsync: -1  
+06-16 16:12:54.607   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:55.038  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:55.038  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:55.038  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:55.038  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:55.045  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:55.045  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:55.045  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:55.046  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:55.607   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:56.571  1746  1746 D StatusBarNetShowView:  applySpeed :3.20
+06-16 16:12:56.571  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView:  applySpeed :3.20
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView:  applySpeed :3.20
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView:  applySpeed :3.20
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView:  applySpeed :3.20
+06-16 16:12:56.572  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:56.591  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:12:56.592  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:12:56.592  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:12:56.608   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:56.617   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.33 dur=3009.82 max=3009.82 min=3009.82
+06-16 16:12:56.621   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.664612,dur:3009.27,max:2918.13,min:91.14  
+06-16 16:12:56.688   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:12:56.711   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.33 dur=3009.58 max=3009.58 min=3009.58
+06-16 16:12:57.918  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:57.918  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:57.918  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:57.918  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:57.925  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:57.927  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:57.928  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:57.929  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:57.972   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.74 dur=1355.24 max=1355.24 min=1355.24
+06-16 16:12:57.976   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:1.476021,dur:1354.99,max:1263.53,min:91.46  
+06-16 16:12:58.040   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:12:58.067   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.74 dur=1355.50 max=1355.50 min=1355.50
+06-16 16:12:58.466   988   988 I thermal_repeater: [recvMdThermalInfo] ret=31, strLen=127,  0, 32767, -127, 9191, 32767, 0
+06-16 16:12:58.965   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:12:59.196  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:59.197  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:59.197  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:59.197  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:59.203  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:59.204  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:12:59.204  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:12:59.205  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:12:59.575  1746  1746 D StatusBarNetShowView:  applySpeed :3.69
+06-16 16:12:59.575  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView:  applySpeed :3.69
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView:  applySpeed :3.69
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView:  applySpeed :3.69
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView:  applySpeed :3.69
+06-16 16:12:59.576  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:12:59.590  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:12:59.590  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:12:59.591  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:12:59.616   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.61 dur=1644.30 max=1644.30 min=1644.30
+06-16 16:12:59.620   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:1.215954,dur:1644.80,max:1552.87,min:91.93  
+06-16 16:12:59.688   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:12:59.711   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.61 dur=1644.26 max=1644.26 min=1644.26
+06-16 16:12:59.714   700   883 I hwcomposer: [DRMDEV] (0) failed to waitNextVsync: -1  
+06-16 16:12:59.965   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:00.001  1365  1566 D AlarmManagerService: inside native alarm timerfd set Alarm Type = 2
+06-16 16:13:00.001  1365  1566 D AlarmManagerService: inside native alarm timerfd set Alarm Type = 3
+06-16 16:13:00.003  1365  1566 D AlarmManagerService: inside native alarm timerfd set Alarm Type = 2
+06-16 16:13:00.003  1365  1566 D AlarmManagerService: inside native alarm timerfd set Alarm Type = 3
+06-16 16:13:00.027  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:13:00.027  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:13:00.027  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:13:00.120   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:00.148   700   883 I hwcomposer: [DRMDEV] (0) failed to waitNextVsync: -1  
+06-16 16:13:00.966   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:01.088   714   734 D power@timer: [mtkPowerTimer] visRead:0
+06-16 16:13:01.966   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:02.581  1746  1746 D StatusBarNetShowView:  applySpeed :2.90
+06-16 16:13:02.581  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:02.581  1746  1746 D StatusBarNetShowView:  applySpeed :2.90
+06-16 16:13:02.581  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:02.582  1746  1746 D StatusBarNetShowView:  applySpeed :2.90
+06-16 16:13:02.582  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:02.582  1746  1746 D StatusBarNetShowView:  applySpeed :2.90
+06-16 16:13:02.582  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:02.582  1746  1746 D StatusBarNetShowView:  applySpeed :2.90
+06-16 16:13:02.582  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:02.606  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:13:02.606  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:13:02.607  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:13:02.630   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.66 dur=3014.38 max=2581.02 min=433.36
+06-16 16:13:02.634   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:1.327216,dur:3013.83,max:2487.97,min:91.46  
+06-16 16:13:02.700   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:02.725   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.66 dur=3014.01 max=2579.41 min=434.60
+06-16 16:13:02.966   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:03.966   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:04.318  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:04.318  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:04.318  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:04.318  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:04.325  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:04.326  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:04.326  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:04.327  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:04.360   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.58 dur=1729.85 max=1729.85 min=1729.85
+06-16 16:13:04.364   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:1.155913,dur:1730.23,max:1638.61,min:91.62  
+06-16 16:13:04.428   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:04.455   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.58 dur=1730.38 max=1730.38 min=1730.38
+06-16 16:13:04.458   700   883 I hwcomposer: [DRMDEV] (0) failed to waitNextVsync: -1  
+06-16 16:13:04.967   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView:  applySpeed :3.17
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView:  applySpeed :3.17
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView:  applySpeed :3.17
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView:  applySpeed :3.17
+06-16 16:13:05.587  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:05.588  1746  1746 D StatusBarNetShowView:  applySpeed :3.17
+06-16 16:13:05.588  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:05.610  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:13:05.611  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:13:05.611  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:13:05.637   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.78 dur=1276.26 max=1276.26 min=1276.26
+06-16 16:13:05.640   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:1.567414,dur:1275.99,max:1184.21,min:91.78  
+06-16 16:13:05.708   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:05.732   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.78 dur=1276.72 max=1276.72 min=1276.72
+06-16 16:13:05.967   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:06.967   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:08.477   988   988 I thermal_repeater: [recvMdThermalInfo] ret=31, strLen=127,  0, 32767, -127, 9191, 32767, 0
+06-16 16:13:08.566   693   693 D [BT]    : mtk_bt_op: BT_VND_OP_LPM_WAKE_SET_STATE
+06-16 16:13:08.584  1365  4853 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=29079 mSleepTimeMs=4140 mIdleTimeMs=18662 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0}
+06-16 16:13:08.591  1746  1746 D StatusBarNetShowView:  applySpeed :2.21
+06-16 16:13:08.591  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:08.591  1746  1746 D StatusBarNetShowView:  applySpeed :2.21
+06-16 16:13:08.591  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:08.592  1746  1746 D StatusBarNetShowView:  applySpeed :2.21
+06-16 16:13:08.592  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:08.592  1746  1746 D StatusBarNetShowView:  applySpeed :2.21
+06-16 16:13:08.592  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:08.592  1746  1746 D StatusBarNetShowView:  applySpeed :2.21
+06-16 16:13:08.592  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:08.614  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:13:08.615  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:13:08.615  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:13:08.623   527   535 E android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup136: Permission denied
+06-16 16:13:08.617   527   527 W Binder:527_2: type=1400 audit(0.0:29170): avc: denied { read } for name="wakeup136" dev="sysfs" ino=46058 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+06-16 16:13:08.627   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.33 dur=2990.84 max=2990.84 min=2990.84
+06-16 16:13:08.629   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.669094,dur:2989.12,max:2896.63,min:92.49  
+06-16 16:13:08.679   527   535 E android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup99: Permission denied
+06-16 16:13:08.673   527   527 W Binder:527_2: type=1400 audit(0.0:29171): avc: denied { read } for name="wakeup99" dev="sysfs" ino=37145 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+06-16 16:13:08.680   527   535 E android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup130: Permission denied
+06-16 16:13:08.677   527   527 W Binder:527_2: type=1400 audit(0.0:29172): avc: denied { read } for name="wakeup130" dev="sysfs" ino=43445 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_batteryinfo:s0 tclass=dir permissive=0
+06-16 16:13:08.700   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:08.719   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.33 dur=2987.07 max=2987.07 min=2987.07
+06-16 16:13:08.720   700   883 I hwcomposer: [DRMDEV] (0) failed to waitNextVsync: -1  
+06-16 16:13:08.727   527   535 E android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup135: Permission denied
+06-16 16:13:08.721   527   527 W Binder:527_2: type=1400 audit(0.0:29173): avc: denied { read } for name="wakeup135" dev="sysfs" ino=45891 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+06-16 16:13:08.748   527   535 E android.system.suspend@1.0-service: Error opening kernel wakelock stats for: wakeup131: Permission denied
+06-16 16:13:08.745   527   527 W Binder:527_2: type=1400 audit(0.0:29174): avc: denied { read } for name="wakeup131" dev="sysfs" ino=43470 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+06-16 16:13:08.796  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:08.796  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:08.796  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:08.797  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:08.803  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:08.804  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:08.804  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:08.805  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:09.624   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:10.398  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:10.398  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:10.398  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:10.398  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:10.406  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:10.407  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:10.407  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:10.408  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:10.625   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:11.003  1365  1391 D AES     : AEEIOCTL_GET/SET_SF_STATE IOCTL,cmd= 1074294797, lParam=0. 
+06-16 16:13:11.003  1365  1391 D AES     : AEEIOCTL_RT_MON_Kick IOCTL,cmd= 2147774474, lParam=300. 
+06-16 16:13:11.597  1746  1746 D StatusBarNetShowView:  applySpeed :4.48
+06-16 16:13:11.597  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView:  applySpeed :4.48
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView:  applySpeed :4.48
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView:  applySpeed :4.48
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView:  applySpeed :4.48
+06-16 16:13:11.598  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:11.615  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:13:11.615  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:13:11.616  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:13:11.625   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:11.640   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.33 dur=3012.62 max=3012.62 min=3012.62
+06-16 16:13:11.644   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.663490,dur:3014.36,max:2924.33,min:90.04  
+06-16 16:13:11.708   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:11.735   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.33 dur=3015.59 max=3015.59 min=3015.59
+06-16 16:13:12.625   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:13.464   746   759 D ccci_mdinit: (1):monitor_time_update_thread round:719 ########
+06-16 16:13:13.626   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:14.602  1746  1746 D StatusBarNetShowView:  applySpeed :2.00
+06-16 16:13:14.602  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:14.602  1746  1746 D StatusBarNetShowView:  applySpeed :2.00
+06-16 16:13:14.602  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:14.603  1746  1746 D StatusBarNetShowView:  applySpeed :2.00
+06-16 16:13:14.603  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:14.603  1746  1746 D StatusBarNetShowView:  applySpeed :2.00
+06-16 16:13:14.603  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:14.603  1746  1746 D StatusBarNetShowView:  applySpeed :2.00
+06-16 16:13:14.603  1746  1746 D StatusBarNetShowView: K/s
+06-16 16:13:14.623  1746  1746 D StatusBar: isHideBlurView isModeWakeUnlock:false,mBrightnessMirrorVisible:false
+06-16 16:13:14.623  1746  1746 D StatusBar: updateBlurView state:0,mSlideHeight=636.0,npExpandedHeight:0.0
+06-16 16:13:14.623  1746  1746 I StatusBar: hideBvBlurView visible:8
+06-16 16:13:14.626   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
+06-16 16:13:14.647   739   739 I BufferQueueProducer: [StatusBar#0](this:0xb4000070cba3f3a8,id:-1,api:0,p:-1,c:739) queueBuffer: fps=0.33 dur=3006.98 max=3006.98 min=3006.98
+06-16 16:13:14.651   700   804 I hwcomposer: [HWCDisplay] [Display_0 (type:1)] fps:0.665123,dur:3006.96,max:2915.31,min:91.65  
+06-16 16:13:14.720   700   877 I hwcomposer: [HWC] (0)fire a callback of refresh to SF[4]  
+06-16 16:13:14.742   739   739 I BufferQueueProducer: [FramebufferSurface](this:0xb40000707b8a77e0,id:-1,api:1,p:739,c:739) queueBuffer: fps=0.33 dur=3007.23 max=3007.23 min=3007.23
+06-16 16:13:15.517  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:15.517  1892  2054 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:15.517  1892  2054 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:15.517  1892  2054 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:15.521  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:15.521  1892  1892 I hct_signal: getEvdoLevel -- evdoDbm = 2147483647
+06-16 16:13:15.522  1892  1892 I hct_signal: getCdmaLevel--cdmaDbm = 2147483647
+06-16 16:13:15.522  1892  1892 D HctWCDMA: rscpThresholds = -109 -106 -99 -92
+06-16 16:13:15.626   714   765 I libPerfCtl: xgfGetFPS pid:1746 fps:-1
