@@ -92,6 +92,7 @@ public class MainNotificationListenerService : NotificationListenerService
                 _runningApps.Add(targetPackageName);
                 launchIntent.AddFlags(ActivityFlags.NewTask);
                 StartActivity(launchIntent);
+                NavigateHome(Application.Context);
             }
         }
         catch { }
@@ -106,5 +107,13 @@ public class MainNotificationListenerService : NotificationListenerService
         }
 
         return false; // ѕриложение не запущено в какой-либо задаче
+    }
+
+    private void NavigateHome(Context context)
+    {
+        Intent intent = new Intent(Intent.ActionMain);
+        intent.AddCategory(Intent.CategoryHome);
+        intent.SetFlags(ActivityFlags.NewTask);
+        context.StartActivity(intent);
     }
 }
