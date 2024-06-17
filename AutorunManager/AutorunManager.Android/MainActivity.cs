@@ -12,11 +12,9 @@ using Android;
 [assembly: UsesPermission(Android.Manifest.Permission.ManageExternalStorage)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
-[assembly: UsesPermission(Android.Manifest.Permission.BindNotificationListenerService)]
 [assembly: UsesPermission(Android.Manifest.Permission.SystemAlertWindow)]
-[assembly: UsesPermission(Android.Manifest.Permission.StartForegroundServicesFromBackground)]
+[assembly: UsesPermission(Android.Manifest.Permission.BindNotificationListenerService)]
 [assembly: UsesPermission(Android.Manifest.Permission.RequestIgnoreBatteryOptimizations)]
-[assembly: UsesPermission(Android.Manifest.Permission.GetPackageSize)]
 [assembly: UsesPermission(Android.Manifest.Permission.QueryAllPackages)]
 
 namespace AutorunManager.Droid

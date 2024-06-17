@@ -69,7 +69,6 @@ public class MainNotificationListenerService : NotificationListenerService
             if(!_runningApps.Contains(app))
             {
                 LaunchTargetApp(app);
-                System.Threading.Tasks.Task.Delay(2500).Wait();
             }
         }
     }
@@ -92,6 +91,7 @@ public class MainNotificationListenerService : NotificationListenerService
                 _runningApps.Add(targetPackageName);
                 launchIntent.AddFlags(ActivityFlags.NewTask);
                 StartActivity(launchIntent);
+                System.Threading.Tasks.Task.Delay(1000).Wait();
                 NavigateHome(Application.Context);
             }
         }
