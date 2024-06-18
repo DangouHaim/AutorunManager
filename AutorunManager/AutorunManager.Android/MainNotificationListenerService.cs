@@ -2,6 +2,7 @@ using Android.App;
 using Android.Content;
 using Android.Service.Notification;
 using Android.Widget;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Xamarin.Essentials;
@@ -11,6 +12,8 @@ using Xamarin.Essentials;
 public class MainNotificationListenerService : NotificationListenerService
 {
     private static List<string> _runningApps = new List<string>();
+    private static List<string> _runnungAppsInNotifications = new List<string>();
+    private static DateTime _lastUpdateTime = DateTime.MinValue;
 
     public override void OnCreate()
     {
@@ -19,12 +22,23 @@ public class MainNotificationListenerService : NotificationListenerService
 
     public override void OnNotificationPosted(StatusBarNotification sbn)
     {
+        _runnungAppsInNotifications.Add(sbn.PackageName);
+
+        if (_lastUpdateTime.AddHours(4) <  DateTime.Now)
+        {
+            _lastUpdateTime = DateTime.Now;
+            _runningApps.Clear();
+        }
+
         LaunchAppList();
     }
 
     public override void OnNotificationRemoved(StatusBarNotification sbn)
     {
-
+        if(_runningApps.Contains(sbn.PackageName))
+        {
+            _runnungAppsInNotifications.Remove(sbn.PackageName);
+        }
     }
 
     private List<string> LoadAppListFromFile()
@@ -66,7 +80,7 @@ public class MainNotificationListenerService : NotificationListenerService
 
         foreach (var app in appList)
         {
-            if(!_runningApps.Contains(app))
+            if(!_runningApps.Contains(app) && !_runnungAppsInNotifications.Contains(app))
             {
                 LaunchTargetApp(app);
             }
