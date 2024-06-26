@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.Provider;
 using System.Runtime.Remoting.Contexts;
 using Android;
+using Android.App.Usage;
 
 [assembly: UsesPermission(Android.Manifest.Permission.ManageExternalStorage)]
 [assembly: UsesPermission(Android.Manifest.Permission.ReadExternalStorage)]
@@ -16,6 +17,7 @@ using Android;
 [assembly: UsesPermission(Android.Manifest.Permission.BindNotificationListenerService)]
 [assembly: UsesPermission(Android.Manifest.Permission.RequestIgnoreBatteryOptimizations)]
 [assembly: UsesPermission(Android.Manifest.Permission.QueryAllPackages)]
+[assembly: UsesPermission(Android.Manifest.Permission.PackageUsageStats)]
 
 namespace AutorunManager.Droid
 {
@@ -34,30 +36,41 @@ namespace AutorunManager.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            // Check if the notification listener permission is granted
-            if (!IsNotificationServiceEnabled())
-            {
-                // Prompt the user to enable the permission
-                PromptNotificationListenerPermission();
-            }
-            else
-            {
-                // Start your notification listener service
-                StartService(new Intent(this, typeof(MainNotificationListenerService)));
-            }
+            // Request notification listener permission
+            RequestNotificationListenerPermission();
 
-            // Request "Draw over other apps" permission if not granted
-            if (!Settings.CanDrawOverlays(this))
-            {
-                RequestDrawOverAppsPermission();
-            }
+            // Request draw over other apps permission
+            RequestDrawOverAppsPermission();
 
-            // Request file system permission on app start
+            // Request file system permission
             RequestFileSystemPermission();
 
-            // Request battery optimization exemption on app start
+            // Request battery optimization permission
             RequestBatteryOptimizationExemption();
+
+            // Request package usage stats permission
+            RequestUsageStatsPermission();
         }
+
+        public void RequestUsageStatsPermission()
+        {
+            if (IsUsageStatsPermissionGranted())
+            {
+                var intent = new Intent(Settings.ActionUsageAccessSettings);
+                StartActivity(intent);
+            }
+        }
+
+        private bool IsUsageStatsPermissionGranted()
+        {
+            UsageStatsManager usageStatsManager = (UsageStatsManager)GetSystemService(Android.Content.Context.UsageStatsService);
+            long endTime = System.DateTime.Now.Millisecond;
+            long startTime = endTime - 1000 * 60;
+            var stats = usageStatsManager.QueryUsageStats(UsageStatsInterval.Daily, startTime, endTime);
+
+            return (stats != null && stats.Count > 0);
+        }
+
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -107,30 +120,43 @@ namespace AutorunManager.Droid
             }
         }
 
-        private void PromptNotificationListenerPermission()
+        private void RequestNotificationListenerPermission()
         {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.SetTitle("Permission Required")
-                   .SetMessage("Please enable notification listener access for this app.")
-                   .SetPositiveButton("Go to Settings", (sender, args) =>
-                   {
-                       // Navigate to the notification listener settings
-                       Intent intent = new Intent(Android.Provider.Settings.ActionNotificationListenerSettings);
-                       StartActivity(intent);
-                   })
-                   .SetNegativeButton("Cancel", (sender, args) =>
-                   {
-                       // Handle cancel action
-                       Toast.MakeText(this, "Permission not granted. The app will not function properly.", ToastLength.Short).Show();
-                   })
-                   .Show();
+            // Check if the notification listener permission is granted
+            if (!IsNotificationServiceEnabled())
+            {
+                // Prompt the user to enable the permission
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.SetTitle("Permission Required")
+                       .SetMessage("Please enable notification listener access for this app.")
+                       .SetPositiveButton("Go to Settings", (sender, args) =>
+                       {
+                           // Navigate to the notification listener settings
+                           Intent intent = new Intent(Android.Provider.Settings.ActionNotificationListenerSettings);
+                           StartActivity(intent);
+                       })
+                       .SetNegativeButton("Cancel", (sender, args) =>
+                       {
+                           // Handle cancel action
+                           Toast.MakeText(this, "Permission not granted. The app will not function properly.", ToastLength.Short).Show();
+                       })
+                       .Show();
+            }
+            else
+            {
+                // Start your notification listener service
+                StartService(new Intent(this, typeof(MainNotificationListenerService)));
+            }
         }
 
         private void RequestDrawOverAppsPermission()
         {
-            // Prompt the user to grant "Draw over other apps" permission
-            var intent = new Intent(Android.Provider.Settings.ActionManageOverlayPermission, Android.Net.Uri.Parse("package:" + PackageName));
-            StartActivityForResult(intent, OverlayPermissionRequestCode);
+            if (!Settings.CanDrawOverlays(this))
+            {
+                // Prompt the user to grant "Draw over other apps" permission
+                var intent = new Intent(Android.Provider.Settings.ActionManageOverlayPermission, Android.Net.Uri.Parse("package:" + PackageName));
+                StartActivityForResult(intent, OverlayPermissionRequestCode);
+            }
         }
     }
 }
