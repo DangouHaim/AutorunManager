@@ -30,7 +30,7 @@ namespace AutorunManager.ViewModel
             SwitchCommand = new Command<AppInfoViewModel>(Switch);
         }
 
-        private void Switch(AppInfoViewModel appInfo)
+        private void Switch(AppInfoViewModel viewModel)
         {
             IsSelected = !IsSelected;
             MainViewModel.Context.OnAppSelected();

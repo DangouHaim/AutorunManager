@@ -47,8 +47,8 @@ public class MainNotificationListenerService : NotificationListenerService
     private List<string> LoadAppListFromFile()
     {
         var appList = new List<string>();
-        string downloadPath = FileSystem.AppDataDirectory;
-        string filePath = Path.Combine(downloadPath, "applist.txt");
+        string defaultDirectory = FileSystem.AppDataDirectory;
+        string filePath = Path.Combine(defaultDirectory, "applist.txt");
 
         try
         {
@@ -66,7 +66,7 @@ public class MainNotificationListenerService : NotificationListenerService
             else
             {
                 File.Create(filePath);
-                Toast.MakeText(this, "App list file not found in the default download directory.", ToastLength.Short).Show();
+                Toast.MakeText(this, "App list file not found in the default directory.", ToastLength.Short).Show();
             }
         }
         catch (IOException ex)
@@ -77,21 +77,49 @@ public class MainNotificationListenerService : NotificationListenerService
         return appList;
     }
 
+    private int LoadInitializationTimeFile()
+    {
+        var initializationTime = 0;
+        string defaultDirectory = FileSystem.AppDataDirectory;
+        string filePath = Path.Combine(defaultDirectory, "initializationTime.txt");
+
+        try
+        {
+            if (File.Exists(filePath))
+            {
+                var line = File.ReadAllText(filePath);
+                initializationTime = int.Parse(line);
+            }
+            else
+            {
+                File.Create(filePath);
+                Toast.MakeText(this, "Initialization time file not found in the default directory.", ToastLength.Short).Show();
+            }
+        }
+        catch (IOException ex)
+        {
+            Toast.MakeText(this, $"Error reading initialization time file: {ex.Message}", ToastLength.Short).Show();
+        }
+
+        return initializationTime;
+    }
+
     private void LaunchAppList()
     {
-        var appList = LoadAppListFromFile(); // Load appList from file
+        var initializationTime = LoadInitializationTimeFile();
+        var appList = LoadAppListFromFile();
         var lastOpenedApp = GetLatestApp()?.PackageName;
 
         foreach (var app in appList)
         {
             if(!_runningApps.Contains(app) && !_runnungAppsInNotifications.Contains(app))
             {
-                LaunchTargetApp(app, lastOpenedApp);
+                LaunchTargetApp(app, lastOpenedApp, initializationTime);
             }
         }
     }
 
-    private void LaunchTargetApp(string targetPackageName, string lastOpenedApp)
+    private void LaunchTargetApp(string targetPackageName, string lastOpenedApp, int initializationTime)
     {
         try
         {
@@ -105,7 +133,11 @@ public class MainNotificationListenerService : NotificationListenerService
             // Иначе пытаемся запустить приложение
             if (LaunchApp(targetPackageName))
             {
-                System.Threading.Tasks.Task.Delay(1000).Wait();
+                if (initializationTime > 0)
+                {
+                    System.Threading.Tasks.Task.Delay(initializationTime).Wait();
+                }
+
                 if (!string.IsNullOrEmpty(lastOpenedApp))
                 {
                     if (!LaunchApp(lastOpenedApp))

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Windows.Input;
 using AutorunManager.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -13,6 +14,8 @@ namespace AutorunManager.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        public ICommand SetInitializationTimeCommand { get; set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private List<AppInfoViewModel> _appsCache { get; set; }
         private ObservableCollection<AppInfoViewModel> _apps { get; set; }
@@ -47,7 +50,24 @@ namespace AutorunManager.ViewModel
             }
         }
 
-        private string _filePath;
+        private string _initializationTime;
+        public string InitializationTime
+        {
+            get { return _initializationTime; }
+            set
+            {
+                if (_initializationTime != value)
+                {
+                    _initializationTime = ValidateNumber(value) == 0
+                        ? ""
+                        : value;
+                    OnPropertyChanged(nameof(InitializationTime));
+                }
+            }
+        }
+
+        private string _appsFilePath;
+        private string _initializationTimeFilePath;
 
         private static MainViewModel _context;
 
@@ -55,16 +75,24 @@ namespace AutorunManager.ViewModel
         {
             _context = this;
 
+            SetInitializationTimeCommand = new Command<MainViewModel>(SetInitializationTime);
+
             Apps = new ObservableCollection<AppInfoViewModel>();
 
-            // Путь к файлу на устройстве для сохранения выбранных приложений
-            _filePath = Path.Combine(FileSystem.AppDataDirectory, "applist.txt");
+            _appsFilePath = Path.Combine(FileSystem.AppDataDirectory, "applist.txt");
+            _initializationTimeFilePath = Path.Combine(FileSystem.AppDataDirectory, "initializationTime.txt");
 
             LoadInstalledApps();
             LoadSelectedApps();
+            LoadInitializationTime();
         }
 
         public static MainViewModel Context => _context;
+
+        private void SetInitializationTime(MainViewModel viewModel)
+        {
+            SaveInitializationTime();
+        }
 
         private void LoadInstalledApps()
         {
@@ -93,9 +121,9 @@ namespace AutorunManager.ViewModel
         {
             try
             {
-                if (File.Exists(_filePath))
+                if (File.Exists(_appsFilePath))
                 {
-                    var selectedPackages = File.ReadAllLines(_filePath);
+                    var selectedPackages = File.ReadAllLines(_appsFilePath);
                     foreach (var app in Apps)
                     {
                         if (selectedPackages.Contains(app.PackageName))
@@ -110,6 +138,36 @@ namespace AutorunManager.ViewModel
             catch (Exception ex)
             {
                 Console.WriteLine($"Error loading app list: {ex.Message}");
+            }
+        }
+
+        private void LoadInitializationTime()
+        {
+            try
+            {
+                if (File.Exists(_initializationTimeFilePath))
+                {
+                    var initializationTime = File.ReadAllText(_initializationTimeFilePath);
+                    InitializationTime = initializationTime;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading app list: {ex.Message}");
+            }
+        }
+
+        private void SaveInitializationTime()
+        {
+            try
+            {
+                var initializationTime = ValidateNumber(InitializationTime);
+
+                File.WriteAllText(_initializationTimeFilePath, initializationTime.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving app list: {ex.Message}");
             }
         }
 
@@ -133,12 +191,12 @@ namespace AutorunManager.ViewModel
                     }
 
                     var selectedPackages = _appsCache.Where(app => app.IsSelected).Select(app => app.PackageName);
-                    File.WriteAllLines(_filePath, selectedPackages);
+                    File.WriteAllLines(_appsFilePath, selectedPackages);
                 }
                 else
                 {
                     var selectedPackages = Apps.Where(app => app.IsSelected).Select(app => app.PackageName);
-                    File.WriteAllLines(_filePath, selectedPackages);
+                    File.WriteAllLines(_appsFilePath, selectedPackages);
                 }
             }
             catch (Exception ex)
@@ -171,6 +229,15 @@ namespace AutorunManager.ViewModel
                 return x.AppName.ToUpper().Contains(SearchText.ToUpper())
                     || x.PackageName.ToUpper().Contains(SearchText.ToUpper());
             }).ToList());
+        }
+
+        private int ValidateNumber(string input)
+        {
+            if (int.TryParse(input, out int result))
+            {
+                return result;
+            }
+            return 0;
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
