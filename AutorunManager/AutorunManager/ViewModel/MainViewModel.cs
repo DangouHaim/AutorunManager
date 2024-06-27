@@ -89,7 +89,7 @@ namespace AutorunManager.ViewModel
             catch { }
         }
 
-        private async void LoadSelectedApps()
+        private void LoadSelectedApps()
         {
             try
             {
@@ -113,7 +113,7 @@ namespace AutorunManager.ViewModel
             }
         }
 
-        private async void SaveSelectedApps()
+        private void SaveSelectedApps()
         {
             try
             {
