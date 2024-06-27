@@ -6,7 +6,6 @@ using Android.Content;
 using Android.Text;
 using Android.Widget;
 using Android.Provider;
-using System.Runtime.Remoting.Contexts;
 using Android;
 using Android.App.Usage;
 

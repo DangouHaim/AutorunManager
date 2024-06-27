@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace AutorunManager
+namespace AutorunManager.Model
 {
     public class AppInfo
     {

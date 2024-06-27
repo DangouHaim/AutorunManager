@@ -2,11 +2,12 @@ using Android.Content.PM;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 using System.Collections.Generic;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using System.Linq;
 using System.IO;
 using AutorunManager.Droid;
+using AutorunManager.Services;
+using AppInfo = AutorunManager.Model.AppInfo;
 
 [assembly: Dependency(typeof(AppInfoService))]
 namespace AutorunManager.Droid

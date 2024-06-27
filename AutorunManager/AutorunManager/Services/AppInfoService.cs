@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using AutorunManager.Model;
 
-namespace AutorunManager
+namespace AutorunManager.Services
 {
     public interface IAppInfoService
     {
